@@ -1,0 +1,46 @@
+%general-style {
+  p {
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .form-field {
+    display: inline;
+  }
+}
+
+%general-block-style {
+  width: 100%;
+
+  @extend %general-style;
+} 
+
+.card {
+  width: 70%;
+  margin: auto;
+  max-width: 1000px;
+
+  .container {
+    width: 100%;
+
+    .general-information {
+      @extend %general-block-style;
+    }
+
+    .contacts {
+      @extend %general-block-style;
+    }
+
+    .official-information {
+      @extend %general-block-style;
+    }
+
+    .skills {
+      @extend %general-block-style;
+    }
+
+    .achievements {
+      @extend %general-block-style;
+    }
+  }
+}

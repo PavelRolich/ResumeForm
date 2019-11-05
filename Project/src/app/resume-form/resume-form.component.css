@@ -1,0 +1,30 @@
+.card .container .general-information p,
+.card .container .contacts p,
+.card .container .official-information p,
+.card .container .skills p,
+.card .container .achievements p {
+  font-size: 20px;
+  font-weight: 400;
+}
+.card .container .general-information .form-field,
+.card .container .contacts .form-field,
+.card .container .official-information .form-field,
+.card .container .skills .form-field,
+.card .container .achievements .form-field {
+  display: inline;
+}
+.card .container .general-information,
+.card .container .contacts,
+.card .container .official-information,
+.card .container .skills,
+.card .container .achievements {
+  width: 100%;
+}
+.card {
+  width: 70%;
+  margin: auto;
+  max-width: 1000px;
+}
+.card .container {
+  width: 100%;
+}
