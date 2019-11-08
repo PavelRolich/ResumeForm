@@ -9,7 +9,7 @@ import { FinalResumeComponent } from './final-resume/final-resume.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import { GeneralInformationComponent } from './general-information/general-information.component';
 import { ContactsComponent } from './contacts/contacts.component';
-import { OfficialInformationComponent } from './official-information/official-information.component';
+import { OfficialInformationComponent, OnlyNumberDirective } from './official-information/official-information.component';
 import { SkillsComponent } from './skills/skills.component';
 import { AchievementsComponent } from './achievements/achievements.component';
 
@@ -33,6 +33,7 @@ import { IMaskModule } from 'angular-imask';
     OfficialInformationComponent,
     SkillsComponent,
     AchievementsComponent,
+    OnlyNumberDirective,
   ],
   imports: [
     BrowserModule,
