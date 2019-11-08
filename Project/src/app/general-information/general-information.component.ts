@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./general-information.component.scss']
 })
 export class GeneralInformationComponent implements OnInit {
-
+  maxDate = new Date();
   constructor() { }
 
   ngOnInit() {
