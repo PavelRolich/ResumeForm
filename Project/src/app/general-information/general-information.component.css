@@ -1,0 +1,24 @@
+.general-information-container .general-information {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  justify-content: center;
+}
+.general-information-container .general-information .form-field {
+  flex: 0 0 40%;
+  margin: 0 10px;
+  width: 400px;
+  min-width: 200px;
+}
+.general-information-container .header-text {
+  font-size: 20px;
+  font-weight: 400;
+}
+.general-information-container {
+  margin: 10px 16px;
+  text-align: center;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}

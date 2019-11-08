@@ -1,0 +1,85 @@
+%general-block-style {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  display: -webkit-flex; 
+  -webkit-flex-wrap: wrap;
+  justify-content: center;
+}
+
+%general-form-field-style {
+  flex: 0 0 40%;
+  margin: 0 10px;
+  width: 400px;
+  min-width: 200px;
+}
+
+%general-text-header-style {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+%general-container-style {
+  margin: 10px 16px;
+  text-align: center;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+.skills-container {
+  @extend %general-container-style;
+
+  .header-text {
+    @extend %general-text-header-style;
+  }
+
+  .skills {
+    @extend %general-block-style;
+    flex-direction: column;
+
+    .add-skill-box {
+      height: 70px;
+
+      .form-field {
+        margin: 0 10px;
+        width: 400px;
+        min-width: 200px;
+      }
+
+      button {
+        margin: 0 10px;
+        height: 50px;
+      }
+    }
+
+    .skill-description {
+
+      ul {
+        margin: auto;
+        max-width: 40%;
+        list-style-type: none;
+
+        li {
+          width: 100%;
+          border: 1px solid #000000;
+          border-radius: 5px;
+          margin: 3px;
+
+          .skill {
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            .description {
+              flex: 0 0 70%;
+            }
+
+            .icon-delete {
+              flex: 0 0 30%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

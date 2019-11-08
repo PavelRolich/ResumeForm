@@ -5,18 +5,32 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResumeFormComponent } from './resume-form/resume-form.component';
 import { FinalResumeComponent } from './final-resume/final-resume.component';
+import { ListItemComponent } from './list-item/list-item.component';
+import { GeneralInformationComponent } from './general-information/general-information.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { OfficialInformationComponent } from './official-information/official-information.component';
+import { SkillsComponent } from './skills/skills.component';
+import { AchievementsComponent } from './achievements/achievements.component';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
     AppComponent,
     ResumeFormComponent,
-    FinalResumeComponent
+    FinalResumeComponent,
+    ListItemComponent,
+    GeneralInformationComponent,
+    ContactsComponent,
+    OfficialInformationComponent,
+    SkillsComponent,
+    AchievementsComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +40,8 @@ import { MatCardModule } from '@angular/material/card';
     MatNativeDateModule,
     MatInputModule,
     MatCardModule,
+    MatButtonModule,
+    MatIconModule,
   ],
   providers: [MatDatepickerModule],
   bootstrap: [AppComponent]

@@ -1,0 +1,55 @@
+.skills-container .skills {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  justify-content: center;
+}
+.skills-container .header-text {
+  font-size: 20px;
+  font-weight: 400;
+}
+.skills-container {
+  margin: 10px 16px;
+  text-align: center;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+.skills-container .skills {
+  flex-direction: column;
+}
+.skills-container .skills .add-skill-box {
+  height: 70px;
+}
+.skills-container .skills .add-skill-box .form-field {
+  margin: 0 10px;
+  width: 400px;
+  min-width: 200px;
+}
+.skills-container .skills .add-skill-box button {
+  margin: 0 10px;
+  height: 50px;
+}
+.skills-container .skills .skill-description ul {
+  margin: auto;
+  max-width: 40%;
+  list-style-type: none;
+}
+.skills-container .skills .skill-description ul li {
+  width: 100%;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  margin: 3px;
+}
+.skills-container .skills .skill-description ul li .skill {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.skills-container .skills .skill-description ul li .skill .description {
+  flex: 0 0 70%;
+}
+.skills-container .skills .skill-description ul li .skill .icon-delete {
+  flex: 0 0 30%;
+}

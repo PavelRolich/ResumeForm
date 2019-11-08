@@ -11,5 +11,4 @@ export class ResumeFormComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

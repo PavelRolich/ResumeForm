@@ -1,66 +1,16 @@
 <mat-card class="card">
+  <p class="card-header">Резюме</p>
   <div class="container">
 
-    <div class="general-information">
-      <p>Общие сведения</p>
-      <mat-form-field class="form-field" appearance="outline">
-        <mat-label>ФИО</mat-label>
-        <input matInput>
-      </mat-form-field>
-      <mat-form-field class="form-field">
-        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
-      <mat-form-field class="form-field" appearance="outline">
-        <mat-label>Проживание</mat-label>
-        <input matInput>
-      </mat-form-field>
-      <mat-form-field class="form-field" appearance="outline">
-        <mat-label>Готов(а) к переезду в город</mat-label>
-        <input matInput>
-      </mat-form-field>
-    </div>
+    <app-general-information></app-general-information>
 
-    <div class="contacts">
-      <p>Контакты</p>
-      <mat-form-field class="form-field" appearance="outline">
-        <mat-label>Телефон</mat-label>
-        <input matInput>
-      </mat-form-field>
-      <mat-form-field class="form-field" appearance="outline">
-        <mat-label>Email</mat-label>
-        <input matInput>
-      </mat-form-field>
-    </div>
+    <app-contacts></app-contacts>
 
-    <div class="official-information">
-      <p>Должностные сведения</p>
-      <mat-form-field class="form-field" appearance="outline">
-        <mat-label>Желаемая должность</mat-label>
-        <input matInput>
-      </mat-form-field>
-      <mat-form-field class="form-field" appearance="outline">
-        <mat-label>Желаемый уровень дохода</mat-label>
-        <input matInput>
-      </mat-form-field>
-    </div>
+    <app-official-information></app-official-information>
 
-    <div class="skills">
-      <p>Навыки</p>
-      <mat-form-field class="form-field">
-        <mat-label>Ключевые навыки</mat-label>
-        <textarea matInput></textarea>
-      </mat-form-field>
-    </div>
+    <app-skills></app-skills>
 
-    <div class="achievements">
-      <p>Достижения</p>
-      <mat-form-field class="form-field">
-        <mat-label>Достижения</mat-label>
-        <textarea matInput></textarea>
-      </mat-form-field>
-    </div>
+    <app-achievements></app-achievements>
 
   </div>
 </mat-card>

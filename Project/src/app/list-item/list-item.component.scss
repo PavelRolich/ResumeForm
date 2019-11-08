@@ -1,0 +1,17 @@
+.item {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+
+  .item-text {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .icon {
+    width: 23px;
+    height: 20px;
+    display: inline-block;
+    margin: 0 3px;
+  }
+}

@@ -1,0 +1,17 @@
+<div class="achievements-container">
+  <p class="header-text">Достижения</p>
+  <div class="achievements">
+    <div class="add-achievements-box">
+      <mat-form-field class="form-field" appearance="outline">
+        <mat-label>Достижения</mat-label>
+        <input matInput #selectedAchievement>
+      </mat-form-field>
+      <button mat-button (click)="onSelectAchievement(selectedAchievement.value)">Добавить</button>
+    </div>
+    <div class="achievements-description">
+      <ul>
+        <li *ngFor="let achievement of achievementsList">{{ achievement }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
