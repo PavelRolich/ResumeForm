@@ -12,6 +12,8 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { OfficialInformationComponent, OnlyNumberDirective } from './official-information/official-information.component';
 import { SkillsComponent } from './skills/skills.component';
 import { AchievementsComponent } from './achievements/achievements.component';
+import { SkillsItemComponent } from './skills/skills-item/skills-item.component';
+import { AchievementsItemComponent } from './achievements/achievements-item/achievements-item.component';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -21,6 +23,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { IMaskModule } from 'angular-imask';
+import { WorkExperienceComponent } from './work-experience/work-experience.component';
+import { WorkExperienceItemComponent } from './work-experience/work-experience-item/work-experience-item.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +38,10 @@ import { IMaskModule } from 'angular-imask';
     SkillsComponent,
     AchievementsComponent,
     OnlyNumberDirective,
+    SkillsItemComponent,
+    AchievementsItemComponent,
+    WorkExperienceComponent,
+    WorkExperienceItemComponent,
   ],
   imports: [
     BrowserModule,
