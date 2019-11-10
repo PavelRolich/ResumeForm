@@ -14,6 +14,10 @@ import { SkillsComponent } from './skills/skills.component';
 import { AchievementsComponent } from './achievements/achievements.component';
 import { SkillsItemComponent } from './skills/skills-item/skills-item.component';
 import { AchievementsItemComponent } from './achievements/achievements-item/achievements-item.component';
+import { WorkExperienceComponent } from './work-experience/work-experience.component';
+import { WorkExperienceItemComponent } from './work-experience/work-experience-item/work-experience-item.component';
+import { EducationComponent } from './education/education.component';
+import { EducationItemComponent } from './education/education-item/education-item.component';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -23,10 +27,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { IMaskModule } from 'angular-imask';
-import { WorkExperienceComponent } from './work-experience/work-experience.component';
-import { WorkExperienceItemComponent } from './work-experience/work-experience-item/work-experience-item.component';
-import { EducationComponent } from './education/education.component';
-import { EducationItemComponent } from './education/education-item/education-item.component';
+import { AdditionalInformationComponent } from './additional-information/additional-information.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { EducationItemComponent } from './education/education-item/education-ite
     WorkExperienceItemComponent,
     EducationComponent,
     EducationItemComponent,
+    AdditionalInformationComponent,
   ],
   imports: [
     BrowserModule,
