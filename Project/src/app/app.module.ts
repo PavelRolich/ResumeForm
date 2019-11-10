@@ -25,6 +25,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { IMaskModule } from 'angular-imask';
 import { WorkExperienceComponent } from './work-experience/work-experience.component';
 import { WorkExperienceItemComponent } from './work-experience/work-experience-item/work-experience-item.component';
+import { EducationComponent } from './education/education.component';
+import { EducationItemComponent } from './education/education-item/education-item.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { WorkExperienceItemComponent } from './work-experience/work-experience-i
     AchievementsItemComponent,
     WorkExperienceComponent,
     WorkExperienceItemComponent,
+    EducationComponent,
+    EducationItemComponent,
   ],
   imports: [
     BrowserModule,
