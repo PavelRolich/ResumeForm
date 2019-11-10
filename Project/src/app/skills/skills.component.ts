@@ -19,4 +19,8 @@ export class SkillsComponent implements OnInit {
       this.skillsList.add(localSkill);
     }
   }
+
+  onDeleteButtonClick(event: any, skill: string) {
+    this.skillsList.delete(skill);
+  }
 }

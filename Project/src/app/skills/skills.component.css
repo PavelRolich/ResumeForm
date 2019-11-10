@@ -1,4 +1,5 @@
-.skills-container .skills {
+.skills-container .skills .add-skill-box,
+.skills-container .skills .skill-description {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -16,40 +17,41 @@
   border: 1px solid #000000;
   border-radius: 5px;
 }
-.skills-container .skills {
-  flex-direction: column;
-}
 .skills-container .skills .add-skill-box {
-  height: 70px;
-}
-.skills-container .skills .add-skill-box .form-field {
-  margin: 0 10px;
-  width: 400px;
-  min-width: 200px;
-}
-.skills-container .skills .add-skill-box button {
-  margin: 0 10px;
-  height: 50px;
-}
-.skills-container .skills .skill-description ul {
   margin: auto;
-  max-width: 40%;
-  list-style-type: none;
+  width: 80% !important;
+  align-items: center;
 }
-.skills-container .skills .skill-description ul li {
+.skills-container .skills .add-skill-box .form-box {
+  flex: 0 0 60%;
+}
+.skills-container .skills .add-skill-box .form-box .form-field {
+  min-width: 200px;
+  width: 100%;
+}
+.skills-container .skills .add-skill-box .button-box {
+  flex: 0 0 20%;
+  padding-bottom: 20px;
+}
+.skills-container .skills .skill-description {
+  margin: auto;
+  width: 80% !important;
+  align-items: center;
+}
+.skills-container .skills .skill-description .list-box {
+  flex: 0 0 60%;
+}
+.skills-container .skills .skill-description .list-box .list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.skills-container .skills .skill-description .list-box .list .list-item {
   width: 100%;
   border: 1px solid #000000;
   border-radius: 5px;
   margin: 3px;
 }
-.skills-container .skills .skill-description ul li .skill {
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-.skills-container .skills .skill-description ul li .skill .description {
-  flex: 0 0 70%;
-}
-.skills-container .skills .skill-description ul li .skill .icon-delete {
-  flex: 0 0 30%;
+.skills-container .skills .skill-description .null-box {
+  flex: 0 0 20%;
 }

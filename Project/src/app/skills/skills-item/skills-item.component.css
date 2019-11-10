@@ -1,0 +1,15 @@
+.skill {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.skill .description {
+  flex: 0 0 70%;
+}
+.skill .icon-delete {
+  flex: 0 0 30%;
+}
+.skill .icon-delete .icon:hover {
+  color: #3f51b5;
+  cursor: pointer;
+}

@@ -19,4 +19,8 @@ export class AchievementsComponent implements OnInit {
       this.achievementsList.add(localAchievement);
     }
   }
+
+  onDeleteButtonClick(event: any, skill: string) {
+    this.achievementsList.delete(skill);
+  }
 }

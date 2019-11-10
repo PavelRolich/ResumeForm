@@ -2,25 +2,27 @@
   <p class="header-text">Навыки</p>
   <div class="skills">
     <div class="add-skill-box">
-      <mat-form-field class="form-field" appearance="outline">
-        <mat-label>Ключевые навыки</mat-label>
-        <input matInput #selectedSkill>
-      </mat-form-field>
-      <button mat-button (click)="onSelectSkill(selectedSkill.value)">Добавить</button>
+      <div class="form-box">
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>Ключевые навыки</mat-label>
+          <input matInput #selectedSkill>
+        </mat-form-field>
+      </div>
+      <div class="button-box">
+        <button mat-button (click)="onSelectSkill(selectedSkill.value)">Добавить</button>
+      </div>
     </div>
     <div class="skill-description">
-      <ul>
-        <li *ngFor="let skill of skillsList">
-          <div class="skill">
-            <div class="description">
-              <p>{{ skill }}</p>
-            </div>
-            <div class="icon-delete">
-              <mat-icon>delete_sweep</mat-icon>
-            </div>
-          </div>
-        </li>
-      </ul>
+      <div class="list-box">
+        <ul class="list">
+          <li class="list-item" *ngFor="let skill of skillsList">
+            <app-skills-item [skill]="skill" (clicked)="onDeleteButtonClick($event, skill)"></app-skills-item>
+          </li>
+        </ul>
+      </div>
+      <div class="null-box">
+
+      </div>
     </div>
   </div>
 </div>

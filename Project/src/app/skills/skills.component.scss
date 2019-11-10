@@ -34,51 +34,53 @@
   }
 
   .skills {
-    @extend %general-block-style;
-    flex-direction: column;
 
     .add-skill-box {
-      height: 70px;
+      margin: auto;
+      width: 80% !important;
+      @extend %general-block-style;
+      align-items: center;
 
-      .form-field {
-        margin: 0 10px;
-        width: 400px;
-        min-width: 200px;
+      .form-box {
+        flex: 0 0 60%;
+
+        .form-field {
+          min-width: 200px;
+          width: 100%;
+        }
       }
 
-      button {
-        margin: 0 10px;
-        height: 50px;
+      .button-box {
+        flex: 0 0 20%;
+        padding-bottom: 20px;
       }
     }
 
     .skill-description {
+      margin: auto;
+      width: 80% !important;
+      @extend %general-block-style;
+      align-items: center;
 
-      ul {
-        margin: auto;
-        max-width: 40%;
-        list-style-type: none;
+      .list-box {
+        flex: 0 0 60%;
 
-        li {
-          width: 100%;
-          border: 1px solid #000000;
-          border-radius: 5px;
-          margin: 3px;
-
-          .skill {
+        .list {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+  
+          .list-item {
             width: 100%;
-            display: flex;
-            align-items: center;
-
-            .description {
-              flex: 0 0 70%;
-            }
-
-            .icon-delete {
-              flex: 0 0 30%;
-            }
+            border: 1px solid #000000;
+            border-radius: 5px;
+            margin: 3px;
           }
         }
+      }
+
+      .null-box {
+        flex: 0 0 20%;
       }
     }
   }

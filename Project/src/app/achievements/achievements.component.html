@@ -2,16 +2,28 @@
   <p class="header-text">Достижения</p>
   <div class="achievements">
     <div class="add-achievements-box">
-      <mat-form-field class="form-field" appearance="outline">
-        <mat-label>Достижения</mat-label>
-        <input matInput #selectedAchievement>
-      </mat-form-field>
-      <button mat-button (click)="onSelectAchievement(selectedAchievement.value)">Добавить</button>
+      <div class="form-box">
+        <mat-form-field class="form-field" appearance="outline">
+          <mat-label>Достижения</mat-label>
+          <input matInput #selectedAchievement>
+        </mat-form-field>
+      </div>
+      <div class="button-box">
+        <button mat-button (click)="onSelectAchievement(selectedAchievement.value)">Добавить</button>
+      </div>
     </div>
     <div class="achievements-description">
-      <ul>
-        <li *ngFor="let achievement of achievementsList">{{ achievement }}</li>
-      </ul>
+      <div class="list-box">
+        <ul class="list">
+          <li class="list-item" *ngFor="let achievement of achievementsList">
+            <app-achievements-item [achievement]="achievement" (clicked)="onDeleteButtonClick($event, achievement)">
+            </app-achievements-item>
+          </li>
+        </ul>
+      </div>
+      <div class="null-box">
+    
+      </div>
     </div>
   </div>
 </div>

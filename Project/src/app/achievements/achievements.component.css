@@ -1,4 +1,5 @@
-.achievements-container .achievements {
+.achievements-container .achievements .add-achievements-box,
+.achievements-container .achievements .achievements-description {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -16,18 +17,54 @@
   border: 1px solid #000000;
   border-radius: 5px;
 }
-.achievements-container .achievements {
-  flex-direction: column;
+.achievements-container .achievements .add-achievements-box {
+  margin: auto;
+  width: 80% !important;
+  align-items: center;
 }
-.achievements-container .achievements .add-achievements-box .form-field {
-  margin: 0 10px;
-  width: 400px;
+.achievements-container .achievements .add-achievements-box .form-box {
+  flex: 0 0 60%;
+}
+.achievements-container
+  .achievements
+  .add-achievements-box
+  .form-box
+  .form-field {
   min-width: 200px;
+  width: 100%;
 }
-.achievements-container .achievements .add-achievements-box button {
-  margin: 0 10px;
-  height: 50px;
+.achievements-container .achievements .add-achievements-box .button-box {
+  flex: 0 0 20%;
+  padding-bottom: 20px;
 }
-.achievements-container .achievements .achievements-description ul {
+.achievements-container .achievements .achievements-description {
+  margin: auto;
+  width: 80% !important;
+  align-items: center;
+}
+.achievements-container .achievements .achievements-description .list-box {
+  flex: 0 0 60%;
+}
+.achievements-container
+  .achievements
+  .achievements-description
+  .list-box
+  .list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.achievements-container
+  .achievements
+  .achievements-description
+  .list-box
+  .list
+  .list-item {
+  width: 100%;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  margin: 3px;
+}
+.achievements-container .achievements .achievements-description .null-box {
+  flex: 0 0 20%;
 }
