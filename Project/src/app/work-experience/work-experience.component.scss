@@ -1,0 +1,64 @@
+@import '../../assets/style/common-component-style.scss';
+@import '../../assets/style/common-content-items-style.scss';
+
+.container {
+  .header-text {
+
+  }
+
+  .component-content {
+
+    .add-content-box {
+      flex-direction: column;
+
+      .form-box {
+        width: 100%;
+
+        .box-item {
+          width: 60%;
+          margin: auto;
+
+          .form-field {
+            width: 100%;
+          }
+
+          &:first-child {
+            width: 80%;
+
+            .form-field {
+              width: 40%;
+              margin: 0 3px;
+            }
+          }
+        }
+      }
+
+      .button-box {
+
+        button {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .content-items {
+
+      .list-box {
+        width: 100%;
+        margin-bottom: 10px;
+
+        .list {
+          margin: auto;
+          list-style-type: none;
+          padding: 0;
+
+          .list-item {
+            border: 1px solid #000000;
+            border-radius: 5px;
+            margin: 3px 0;
+          }
+        } 
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.container .component-content .add-content-box,
+.container .component-content .content-items {
+  margin: auto;
+  width: 80%;
+  align-items: center;
+}
+.container .component-content .add-content-box,
+.container .component-content .content-items {
+  display: flex;
+  flex-wrap: wrap;
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  justify-content: center;
+}

@@ -1,0 +1,32 @@
+@import './common-component-style.scss';
+
+%general-block-style {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  display: -webkit-flex; 
+  -webkit-flex-wrap: wrap;
+  justify-content: center;
+}
+
+%general-form-field-style {
+  flex: 0 0 40%;
+  margin: 0 10px;
+  width: 400px;
+  min-width: 200px;
+}
+
+.container {
+
+  .header-text {
+
+  }
+
+  .component-content {
+    @extend %general-block-style;
+
+    .form-field {
+      @extend %general-form-field-style;
+    }
+  }
+}

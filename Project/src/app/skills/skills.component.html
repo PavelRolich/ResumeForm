@@ -1,7 +1,7 @@
-<div class="skills-container">
+<div class="container">
   <p class="header-text">Навыки</p>
-  <div class="skills">
-    <div class="add-skill-box">
+  <div class="component-content">
+    <div class="add-content-box">
       <div class="form-box">
         <mat-form-field class="form-field" appearance="outline">
           <mat-label>Ключевые навыки</mat-label>
@@ -12,7 +12,7 @@
         <button mat-button (click)="onSelectSkill(selectedSkill.value)">Добавить</button>
       </div>
     </div>
-    <div class="skill-description">
+    <div class="content-items">
       <div class="list-box">
         <ul class="list">
           <li class="list-item" *ngFor="let skill of skillsList">

@@ -1,1 +1,8 @@
-<p>work-experience-item works!</p>
+<div class="container">
+  <p class="position"><span class="period">{{ experience.periodOfTime.start | date }}-{{ experience.periodOfTime.end | date}}</span> {{ experience.position }}</p>
+  <p class="job">{{ experience.job }}</p>
+  <p class="scope">Сфера деятельности компании: {{ experience.scopeCompany }}</p>
+  <ul class="list">
+    <li class="list-item" *ngFor="let res of experience.responsibility">{{ res }}</li>
+  </ul>
+</div>

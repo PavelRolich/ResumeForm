@@ -1,0 +1,7 @@
+.container {
+  padding: 0 16px;
+  text-align: left;
+}
+.container .list .list-item {
+  margin: 3px 0;
+}

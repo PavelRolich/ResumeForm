@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResumeFormComponent } from './resume-form/resume-form.component';
 import { FinalResumeComponent } from './final-resume/final-resume.component';
-import { ListItemComponent } from './list-item/list-item.component';
 import { GeneralInformationComponent } from './general-information/general-information.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { OfficialInformationComponent, OnlyNumberDirective } from './official-information/official-information.component';
@@ -18,6 +17,7 @@ import { WorkExperienceComponent } from './work-experience/work-experience.compo
 import { WorkExperienceItemComponent } from './work-experience/work-experience-item/work-experience-item.component';
 import { EducationComponent } from './education/education.component';
 import { EducationItemComponent } from './education/education-item/education-item.component';
+import { AdditionalInformationComponent } from './additional-information/additional-information.component';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -27,14 +27,12 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { IMaskModule } from 'angular-imask';
-import { AdditionalInformationComponent } from './additional-information/additional-information.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ResumeFormComponent,
     FinalResumeComponent,
-    ListItemComponent,
     GeneralInformationComponent,
     ContactsComponent,
     OfficialInformationComponent,

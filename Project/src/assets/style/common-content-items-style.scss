@@ -1,0 +1,28 @@
+%general-content-items-style {
+  margin: auto;
+  width: 80%;
+  @extend %general-block-style;
+  align-items: center;
+}
+
+%general-block-style {
+  display: flex;
+  flex-wrap: wrap;
+  display: -webkit-flex; 
+  -webkit-flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container {
+
+  .component-content {
+
+    .add-content-box {
+      @extend %general-content-items-style;
+    }
+
+    .content-items {
+      @extend %general-content-items-style;
+    }
+  }
+}

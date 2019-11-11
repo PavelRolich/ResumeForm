@@ -1,5 +1,5 @@
-.achievements-container .achievements .add-achievements-box,
-.achievements-container .achievements .achievements-description {
+.container .component-content .add-achievements-box,
+.container .component-content .achievements-description {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -7,55 +7,47 @@
   -webkit-flex-wrap: wrap;
   justify-content: center;
 }
-.achievements-container .header-text {
+.container .header-text {
   font-size: 20px;
   font-weight: 400;
 }
-.achievements-container {
+.container {
   margin: 10px 16px;
   text-align: center;
   border: 1px solid #000000;
   border-radius: 5px;
 }
-.achievements-container .achievements .add-achievements-box {
+.container .component-content .add-achievements-box {
   margin: auto;
   width: 80% !important;
   align-items: center;
 }
-.achievements-container .achievements .add-achievements-box .form-box {
+.container .component-content .add-achievements-box .form-box {
   flex: 0 0 60%;
 }
-.achievements-container
-  .achievements
-  .add-achievements-box
-  .form-box
-  .form-field {
+.container .component-content .add-achievements-box .form-box .form-field {
   min-width: 200px;
   width: 100%;
 }
-.achievements-container .achievements .add-achievements-box .button-box {
+.container .component-content .add-achievements-box .button-box {
   flex: 0 0 20%;
   padding-bottom: 20px;
 }
-.achievements-container .achievements .achievements-description {
+.container .component-content .achievements-description {
   margin: auto;
   width: 80% !important;
   align-items: center;
 }
-.achievements-container .achievements .achievements-description .list-box {
+.container .component-content .achievements-description .list-box {
   flex: 0 0 60%;
 }
-.achievements-container
-  .achievements
-  .achievements-description
-  .list-box
-  .list {
+.container .component-content .achievements-description .list-box .list {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-.achievements-container
-  .achievements
+.container
+  .component-content
   .achievements-description
   .list-box
   .list
@@ -65,6 +57,6 @@
   border-radius: 5px;
   margin: 3px;
 }
-.achievements-container .achievements .achievements-description .null-box {
+.container .component-content .achievements-description .null-box {
   flex: 0 0 20%;
 }

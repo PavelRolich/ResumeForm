@@ -1,1 +1,66 @@
-<p>work-experience works!</p>
+<div class="container">
+  <p class="header-text">Опыт работы</p>
+  <div class="component-content">
+
+    <div class="add-content-box">
+      <div class="form-box">
+
+        <div class="box-item">
+          <p>Период времени</p>
+          <mat-form-field class="form-field">
+            <input matInput [matDatepicker]="start" placeholder="Начало" #periodStart>
+            <mat-datepicker-toggle matSuffix [for]="start"></mat-datepicker-toggle>
+            <mat-datepicker touchUi #start></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field class="form-field">
+            <input matInput [matDatepicker]="end" placeholder="Конец" #periodEnd>
+            <mat-datepicker-toggle matSuffix [for]="end"></mat-datepicker-toggle>
+            <mat-datepicker touchUi #end></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div class="box-item">
+          <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Место работы</mat-label>
+            <input matInput #job>
+          </mat-form-field>
+        </div>
+
+        <div class="box-item">
+          <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Сфера деятельности компании</mat-label>
+            <input matInput #scopeCompany>
+          </mat-form-field>
+        </div>
+
+        <div class="box-item">
+          <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Занимаемая должность</mat-label>
+            <input matInput #position>
+          </mat-form-field>
+        </div>
+
+        <div class="box-item">
+          <mat-form-field class="form-field">
+            <textarea matInput placeholder="Обязанности" #responsibility></textarea>
+          </mat-form-field>
+        </div>
+
+      </div>
+
+      <div class="button-box">
+        <button mat-button (click)="addItem(periodStart.value, periodEnd.value, job.value, scopeCompany.value, position.value, responsibility.value)">Добавить</button>
+      </div>
+
+    </div>
+    <div class="content-items">
+      <div class="list-box">
+        <ul class="list">
+          <li class="list-item" *ngFor="let experience of workExperienceList">
+            <app-work-experience-item [experience]="experience"></app-work-experience-item>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

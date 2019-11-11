@@ -1,0 +1,53 @@
+@import './common-component-style.scss';
+@import './common-content-items-style.scss';
+
+.container {
+
+  .header-text {
+
+  }
+
+  .component-content {
+
+    .add-content-box {
+
+      .form-box {
+        flex: 0 0 60%;
+
+        .form-field {
+          min-width: 200px;
+          width: 100%;
+        }
+      }
+
+      .button-box {
+        flex: 0 0 20%;
+        padding-bottom: 20px;
+      }
+    }
+
+    .content-items {
+
+      .list-box {
+        flex: 0 0 60%;
+
+        .list {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+  
+          .list-item {
+            width: 100%;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            margin: 3px;
+          }
+        }
+      }
+
+      .null-box {
+        flex: 0 0 20%;
+      }
+    }
+  }
+}
