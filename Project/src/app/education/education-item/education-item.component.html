@@ -1,1 +1,6 @@
-<p>education-item works!</p>
+<div class="container">
+  <p class="place"><span class="period">{{ education.periodOfTime.start | date }}-{{ education.periodOfTime.end | date}}</span> {{ education.studyPlace }}</p>
+  <p class="faculty">Факультет {{ education.faculty }}</p>
+  <p class="specialty">Специальность: {{ education.specialty }}</p>
+  <p class="qualification">Квалификация: {{ education.qualification }}</p>
+</div>

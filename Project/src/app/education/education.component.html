@@ -1,1 +1,67 @@
-<p>education works!</p>
+<div class="container">
+  <p class="header-text">Образование</p>
+  <div class="component-content">
+
+    <div class="add-content-box">
+      <div class="form-box">
+
+        <div class="box-item">
+          <p>Период времени</p>
+          <mat-form-field class="form-field">
+            <input matInput [matDatepicker]="start" placeholder="Начало" #periodStart>
+            <mat-datepicker-toggle matSuffix [for]="start"></mat-datepicker-toggle>
+            <mat-datepicker touchUi #start></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field class="form-field">
+            <input matInput [matDatepicker]="end" placeholder="Конец" #periodEnd>
+            <mat-datepicker-toggle matSuffix [for]="end"></mat-datepicker-toggle>
+            <mat-datepicker touchUi #end></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div class="box-item">
+          <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Место учебы</mat-label>
+            <input matInput #studyPlace>
+          </mat-form-field>
+        </div>
+
+        <div class="box-item">
+          <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Факультет</mat-label>
+            <input matInput #faculty>
+          </mat-form-field>
+        </div>
+
+        <div class="box-item">
+          <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Специальность</mat-label>
+            <input matInput #specialty>
+          </mat-form-field>
+        </div>
+
+        <div class="box-item">
+          <mat-form-field class="form-field" appearance="outline">
+            <mat-label>Квалификация</mat-label>
+            <input matInput #qualification>
+          </mat-form-field>
+        </div>
+
+      </div>
+
+      <div class="button-box">
+        <button mat-button (click)="addItem(periodStart.value, periodEnd.value, studyPlace.value, faculty.value, specialty.value, qualification.value)">Добавить</button>
+      </div>
+
+    </div>
+    <div class="content-items">
+      <div class="list-box">
+        <ul class="list">
+          <li class="list-item" *ngFor="let edu of educationList">
+            <app-education-item [education]="edu"></app-education-item>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
