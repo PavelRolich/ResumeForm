@@ -10,3 +10,14 @@
 .card .container {
   width: 100%;
 }
+.card .container .button-box {
+  width: 100%;
+  text-align: center;
+}
+.card .container .button-box .submit-btn {
+  width: 200px;
+  height: 50px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  font-size: 20px;
+}
