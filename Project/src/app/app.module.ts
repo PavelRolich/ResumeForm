@@ -18,6 +18,7 @@ import { WorkExperienceItemComponent } from './work-experience/work-experience-i
 import { EducationComponent } from './education/education.component';
 import { EducationItemComponent } from './education/education-item/education-item.component';
 import { AdditionalInformationComponent } from './additional-information/additional-information.component';
+import { PhotoComponent } from './photo/photo.component';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -46,6 +47,7 @@ import { IMaskModule } from 'angular-imask';
     EducationComponent,
     EducationItemComponent,
     AdditionalInformationComponent,
+    PhotoComponent,
   ],
   imports: [
     BrowserModule,
