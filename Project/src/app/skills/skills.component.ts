@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-skills',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
+  @Input() skills;
   skillsList = new Set();
 
   constructor() { }
@@ -18,9 +19,11 @@ export class SkillsComponent implements OnInit {
       const localSkill = selectedSkill;
       this.skillsList.add(localSkill);
     }
+    this.skills = this.skillsList;
   }
 
   onDeleteButtonClick(event: any, skill: string) {
     this.skillsList.delete(skill);
+    this.skills = this.skillsList;
   }
 }

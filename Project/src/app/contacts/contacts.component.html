@@ -3,10 +3,10 @@
   <div class="component-content">
     <mat-form-field class="form-field" appearance="outline">
       <mat-label>Телефон</mat-label>
-      <input [imask]="{mask: '+{375}(00)000-00-00'}" value="+375(" matInput>
+      <input (change)="onChangePhoneValue($event)" [imask]="{mask: '+{375}(00)000-00-00'}" value="+375(" matInput>
     </mat-form-field>
     <mat-form-field class="form-field" appearance="outline">
-      <input matInput placeholder="Email" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
+      <input (change)="onChangeEmailValue($event)" matInput placeholder="Email" [formControl]="emailFormControl" [errorStateMatcher]="matcher">
       <mat-hint>Errors appear instantly!</mat-hint>
       <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
         Please enter a valid email address
@@ -17,11 +17,15 @@
     </mat-form-field>
     <mat-form-field class="form-field" appearance="outline">
       <mat-label>Git</mat-label>
-      <input placeholder="login" matInput>
+      <input (change)="onChangeGitValue($event)" placeholder="login" matInput>
     </mat-form-field>
     <mat-form-field class="form-field" appearance="outline">
       <mat-label>Skype</mat-label>
-      <input placeholder="login" matInput>
+      <input (change)="onChangeSkypeValue($event)" placeholder="login" matInput>
+    </mat-form-field>
+    <mat-form-field class="form-field" appearance="outline">
+      <mat-label>LinkedIn</mat-label>
+      <input (change)="onChangeLinkedInValue($event)" placeholder="login" matInput>
     </mat-form-field>
   </div>
 </div>

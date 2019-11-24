@@ -21,3 +21,7 @@
   border-radius: 5px;
   font-size: 20px;
 }
+.card .container .button-box .submit-btn a {
+  text-decoration: none;
+  color: #000000;
+}

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Education } from '../app.model';
 
 @Component({
   selector: 'app-education',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./education.component.scss']
 })
 export class EducationComponent implements OnInit {
+  @Input() education;
   educationList = new Set<Education>();
 
   constructor() { }
@@ -25,17 +27,7 @@ export class EducationComponent implements OnInit {
       qualification,
     };
     this.educationList.add(item);
+    this.education = this.educationList;
   }
 
-}
-
-export interface Education {
-  periodOfTime: {
-    start: Date;
-    end: Date;
-  };
-  studyPlace: string;
-  faculty?: string;
-  specialty?: string;
-  qualification: string;
 }

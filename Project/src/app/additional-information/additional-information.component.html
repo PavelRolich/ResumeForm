@@ -2,7 +2,7 @@
   <p class="header-text">Дополнительные сведения</p>
   <div class="component-content">
     <mat-form-field class="form-field">
-      <textarea matInput placeholder="Уровень иностранного языка, водительская категория, готовность к командировкам и т.д." #responsibility></textarea>
+      <textarea (change)="onChangeValue($event)" matInput placeholder="Уровень иностранного языка, водительская категория, готовность к командировкам и т.д."></textarea>
     </mat-form-field>
   </div>
 </div>

@@ -6,12 +6,20 @@ import { Directive, ElementRef, HostListener, Input, OnInit, Component } from '@
   styleUrls: ['./official-information.component.scss']
 })
 export class OfficialInformationComponent implements OnInit {
+  @Input() offInformation;
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  onChangeCareerObjectiveValue(event: any) {
+    this.offInformation.careerObjective = event.target.value;
+  }
+
+  onChangeDesiredIncomeValue(event: any) {
+    this.offInformation.desiredIncome = event.target.value;
+  }
 }
 
 @Directive({

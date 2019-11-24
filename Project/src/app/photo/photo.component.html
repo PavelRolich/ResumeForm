@@ -3,9 +3,9 @@
   <div class="component-content">
     <mat-form-field class="form-field" appearance="outline">
       <mat-label>Путь к фото</mat-label>
-      <input matInput #position>
+      <input (change)="onChangeImgPathValue($event)" matInput #position>
     </mat-form-field>
     <p class="or-text">ИЛИ</p>
-    <input class="form-field" type="file" placeholder="Upload file">
+    <input (change)="onChangeImgPathValue($event)" class="form-field" type="file" placeholder="Upload file">
   </div>
 </div>

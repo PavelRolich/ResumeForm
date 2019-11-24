@@ -3,11 +3,11 @@
   <div class="component-content">
     <mat-form-field class="form-field" appearance="outline">
       <mat-label>Желаемая должность</mat-label>
-      <input matInput>
+      <input (change)="onChangeCareerObjectiveValue($event)" matInput>
     </mat-form-field>
     <mat-form-field class="form-field" appearance="outline">
       <mat-label>Желаемый уровень дохода</mat-label>
-      <input placeholder="USD" OnlyNumber="true" appOnlyNumberDirective matInput>
+      <input (change)="onChangeDesiredIncomeValue($event)" placeholder="USD" OnlyNumber="true" appOnlyNumberDirective matInput>
     </mat-form-field>
   </div>
 </div>

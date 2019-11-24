@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { WorkExperience } from '../work-experience.component';
+import { WorkExperience } from 'src/app/app.model';
 
 @Component({
   selector: 'app-work-experience-item',

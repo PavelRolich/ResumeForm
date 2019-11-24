@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { WorkExperience } from '../app.model';
 
 @Component({
   selector: 'app-work-experience',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./work-experience.component.scss']
 })
 export class WorkExperienceComponent implements OnInit {
+  @Input() workExp;
   workExperienceList = new Set<WorkExperience>();
 
   constructor() { }
@@ -27,16 +29,6 @@ export class WorkExperienceComponent implements OnInit {
       }),
     };
     this.workExperienceList.add(item);
+    this.workExp = this.workExperienceList;
   }
-}
-
-export interface WorkExperience {
-  periodOfTime: {
-    start: Date;
-    end: Date;
-  };
-  job: string;
-  scopeCompany: string;
-  position: string;
-  responsibility: string[];
 }
