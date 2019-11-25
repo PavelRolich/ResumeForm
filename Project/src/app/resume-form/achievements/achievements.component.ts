@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-achievements',
@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./achievements.component.scss']
 })
 export class AchievementsComponent implements OnInit {
-  @Input() achievements;
+  @Output() sendInfo = new EventEmitter();
   achievementsList = new Set();
 
   constructor() { }
@@ -19,11 +19,11 @@ export class AchievementsComponent implements OnInit {
       const localAchievement = selectedAchievement;
       this.achievementsList.add(localAchievement);
     }
-    this.achievements = this.achievementsList;
+    this.sendInfo.emit(this.achievementsList);
   }
 
-  onDeleteButtonClick(event: any, skill: string) {
+  onDeleteButtonClick(skill: string) {
     this.achievementsList.delete(skill);
-    this.achievements = this.achievementsList;
+    this.sendInfo.emit(this.achievementsList);
   }
 }

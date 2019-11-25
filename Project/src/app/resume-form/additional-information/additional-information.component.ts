@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, Input } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-additional-information',
@@ -6,7 +6,8 @@ import { Component, OnInit, Output, Input } from '@angular/core';
   styleUrls: ['./additional-information.component.scss']
 })
 export class AdditionalInformationComponent implements OnInit {
-  @Input() addInformation;
+  @Output() sendInfo = new EventEmitter();
+  addInformation: string[];
 
   constructor() { }
 
@@ -14,7 +15,11 @@ export class AdditionalInformationComponent implements OnInit {
     
   }
 
-  onChangeValue(event: any) {
-    this.addInformation = event.target.value;
+  onChangeValue(event: Event) {
+    const local: string = (event.target as HTMLInputElement).value;
+    this.addInformation = local.split(',').map((localItem) => {
+      return localItem.trim();
+    });
+    this.sendInfo.emit(this.addInformation);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Education } from '../../app.model';
 
 @Component({
@@ -7,7 +7,7 @@ import { Education } from '../../app.model';
   styleUrls: ['./education.component.scss']
 })
 export class EducationComponent implements OnInit {
-  @Input() education;
+  @Output() sendInfo = new EventEmitter();
   educationList = new Set<Education>();
 
   constructor() { }
@@ -27,7 +27,7 @@ export class EducationComponent implements OnInit {
       qualification,
     };
     this.educationList.add(item);
-    this.education = this.educationList;
+    this.sendInfo.emit(this.educationList);
   }
 
 }

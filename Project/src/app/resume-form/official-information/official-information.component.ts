@@ -1,4 +1,5 @@
-import { Directive, ElementRef, HostListener, Input, OnInit, Component } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input, OnInit, Component, Output, EventEmitter } from '@angular/core';
+import { OfficialInformation } from 'src/app/app.model';
 
 @Component({
   selector: 'app-official-information',
@@ -6,19 +7,26 @@ import { Directive, ElementRef, HostListener, Input, OnInit, Component } from '@
   styleUrls: ['./official-information.component.scss']
 })
 export class OfficialInformationComponent implements OnInit {
-  @Input() offInformation;
+  @Output() sendInfo = new EventEmitter();
+  offInformation: OfficialInformation;
 
   constructor() { }
 
   ngOnInit() {
+    this.offInformation = {
+      careerObjective: '',
+      desiredIncome: 0,
+    };
   }
 
-  onChangeCareerObjectiveValue(event: any) {
-    this.offInformation.careerObjective = event.target.value;
+  onChangeCareerObjectiveValue(event: Event) {
+    this.offInformation.careerObjective = (event.target as HTMLInputElement).value;
+    this.sendInfo.emit(this.offInformation);
   }
 
-  onChangeDesiredIncomeValue(event: any) {
-    this.offInformation.desiredIncome = event.target.value;
+  onChangeDesiredIncomeValue(event: Event) {
+    this.offInformation.desiredIncome = +(event.target as HTMLInputElement).value;
+    this.sendInfo.emit(this.offInformation);
   }
 }
 
@@ -33,7 +41,7 @@ export class OnlyNumberDirective {
   @Input() OnlyNumber: boolean;
 
   @HostListener('keydown', ['$event']) onKeyDown(event) {
-    const e = <KeyboardEvent> event;
+    const e = event as KeyboardEvent;
     if (this.OnlyNumber) {
       if ([46, 8, 9, 27, 13, 110, 190].indexOf(e.keyCode) !== -1 ||
         // Allow: Ctrl+A

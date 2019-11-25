@@ -2,27 +2,26 @@
   <p class="card-header">Резюме</p>
   <div class="container">
 
-    <app-general-information [genInformation]="resumeObject.generalInformation"></app-general-information>
+    <app-general-information (sendInfo)="addGeneralInfo($event)"></app-general-information>
 
-    <app-contacts [contacts]="resumeObject.contacts"></app-contacts>
+    <app-contacts (sendInfo)="addContacts($event)"></app-contacts>
 
-    <app-official-information [offInformation]="resumeObject.officialInformation"></app-official-information>
+    <app-official-information (sendInfo)="addOffInfo($event)"></app-official-information>
 
-    <app-skills [skills]="resumeObject.skills"></app-skills>
+    <app-skills (sendInfo)="addSkills($event)"></app-skills>
 
-    <app-achievements [achievements]="resumeObject.achievements"></app-achievements>
+    <app-achievements (sendInfo)="addAchievements($event)"></app-achievements>
 
-    <app-work-experience [workExp]="resumeObject.workExperience"></app-work-experience>
+    <app-work-experience (sendInfo)="addWorkExperience($event)"></app-work-experience>
 
-    <app-education [education]="resumeObject.education"></app-education>
+    <app-education (sendInfo)="addEducation($event)"></app-education>
 
-    <app-additional-information [addInformation]="resumeObject.additionalInformation"></app-additional-information>
+    <app-additional-information (sendInfo)="addInfo($event)"></app-additional-information>
 
-    <app-photo [photo]="resumeObject.photo"></app-photo>
+    <app-photo (sendInfo)="addPhoto($event)"></app-photo>
 
     <div class="button-box">
-      <button class="submit-btn" mat-button><a (click)="onSubmitClick()">Принять</a></button>
+      <button class="submit-btn" mat-button><a (click)="onSubmitClick()" routerLink="/resume" routerLinkActive="active">Принять</a></button>
     </div>
-    <!-- <a (click)="onSubmitClick()" routerLink="/resume" routerLinkActive="active">Принять</a> -->
   </div>
 </mat-card>

@@ -1,6 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroupDirective, NgForm, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
+import { Contacts } from 'src/app/app.model';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -15,7 +16,8 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   styleUrls: ['./contacts.component.scss']
 })
 export class ContactsComponent implements OnInit {
-  @Input() contacts;
+  @Output() sendInfo = new EventEmitter();
+  contacts: Contacts;
   emailFormControl = new FormControl('', [
     Validators.required,
     Validators.email,
@@ -26,25 +28,37 @@ export class ContactsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.contacts = {
+      phoneNumber: '',
+      email: '',
+      git: '',
+      skype: '',
+      linkedin: '',
+    };
   }
 
-  onChangePhoneValue(event: any) {
-    this.contacts.phoneNumber = event.target.value;
+  onChangePhoneValue(event: Event) {
+    this.contacts.phoneNumber = (event.target as HTMLInputElement).value;
+    this.sendInfo.emit(this.contacts);
   }
 
-  onChangeEmailValue(event: any) {
-    this.contacts.email = event.target.value;
+  onChangeEmailValue(event: Event) {
+    this.contacts.email = (event.target as HTMLInputElement).value;
+    this.sendInfo.emit(this.contacts);
   }
 
-  onChangeGitValue(event: any) {
-    this.contacts.git = event.target.value;
+  onChangeGitValue(event: Event) {
+    this.contacts.git = (event.target as HTMLInputElement).value;
+    this.sendInfo.emit(this.contacts);
   }
 
-  onChangeSkypeValue(event: any) {
-    this.contacts.skype = event.target.value;
+  onChangeSkypeValue(event: Event) {
+    this.contacts.skype = (event.target as HTMLInputElement).value;
+    this.sendInfo.emit(this.contacts);
   }
 
-  onChangeLinkedInValue(event: any) {
-    this.contacts.linkedin = event.target.value;
+  onChangeLinkedInValue(event: Event) {
+    this.contacts.linkedin = (event.target as HTMLInputElement).value;
+    this.sendInfo.emit(this.contacts);
   }
 }

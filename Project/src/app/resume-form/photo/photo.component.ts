@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-photo',
@@ -6,16 +6,16 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./photo.component.scss']
 })
 export class PhotoComponent implements OnInit {
-  @Input() photo: string;
+  @Output() sendInfo = new EventEmitter();
+  photo: string;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  onChangeImgPathValue(event: any) {
-    console.log(event.target.value);
-    this.photo = event.target.value;
-    console.log(this.photo);
+  onChangeImgPathValue(event: Event) {
+    this.photo = (event.target as HTMLInputElement).value;
+    this.sendInfo.emit(this.photo);
   }
 }

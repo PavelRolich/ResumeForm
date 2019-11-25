@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { WorkExperience } from '../../app.model';
 
 @Component({
@@ -7,7 +7,7 @@ import { WorkExperience } from '../../app.model';
   styleUrls: ['./work-experience.component.scss']
 })
 export class WorkExperienceComponent implements OnInit {
-  @Input() workExp;
+  @Output() sendInfo = new EventEmitter();
   workExperienceList = new Set<WorkExperience>();
 
   constructor() { }
@@ -29,6 +29,6 @@ export class WorkExperienceComponent implements OnInit {
       }),
     };
     this.workExperienceList.add(item);
-    this.workExp = this.workExperienceList;
+    this.sendInfo.emit(this.workExperienceList);
   }
 }

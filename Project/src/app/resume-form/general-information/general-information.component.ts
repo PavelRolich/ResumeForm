@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { GeneralInformation } from 'src/app/app.model';
 
 @Component({
   selector: 'app-general-information',
@@ -6,27 +7,38 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./general-information.component.scss']
 })
 export class GeneralInformationComponent implements OnInit {
+  @Output() sendInfo = new EventEmitter();
   maxDate = new Date();
-  @Input() genInformation;
+  genInformation: GeneralInformation;
 
   constructor() { }
 
   ngOnInit() {
+    this.genInformation = {
+      name: '',
+      date: new Date(),
+      accommodation: '',
+      relocation: '',
+    };
   }
 
-  onChangeDateValue(event: any) {
-    this.genInformation.date = event.target.value;
+  onChangeDateValue(event: Event) {
+    this.genInformation.date = new Date((event.target as HTMLInputElement).value);
+    this.sendInfo.emit(this.genInformation);
   }
 
-  onChangeNameValue(event: any) {
-    this.genInformation.name = event.target.value;
+  onChangeNameValue(event: Event) {
+    this.genInformation.name = (event.target as HTMLInputElement).value;
+    this.sendInfo.emit(this.genInformation);
   }
 
-  onChangeAccommodationValue(event: any) {
-    this.genInformation.accommodation = event.target.value;
+  onChangeAccommodationValue(event: Event) {
+    this.genInformation.accommodation = (event.target as HTMLInputElement).value;
+    this.sendInfo.emit(this.genInformation);
   }
 
-  onChangeRelocationValue(event: any) {
-    this.genInformation.relocation = event.target.value;
+  onChangeRelocationValue(event: Event) {
+    this.genInformation.relocation = (event.target as HTMLInputElement).value;
+    this.sendInfo.emit(this.genInformation);
   }
 }
