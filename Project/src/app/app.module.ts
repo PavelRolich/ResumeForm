@@ -20,6 +20,7 @@ import { EducationComponent } from './resume-form/education/education.component'
 import { EducationItemComponent } from './resume-form/education/education-item/education-item.component';
 import { AdditionalInformationComponent } from './resume-form/additional-information/additional-information.component';
 import { PhotoComponent } from './resume-form/photo/photo.component';
+import { GetResumeDataService } from './get-resume-data.service';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -75,7 +76,8 @@ const appRoutes: Routes = [
   ],
   providers: [
     MatDatepickerModule,
-    { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher }
+    { provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher },
+    GetResumeDataService,
   ],
   bootstrap: [AppComponent]
 })

@@ -1,27 +1,30 @@
 <mat-card class="card">
   <div class="container">
     <div class="img-box">
-      <img src="" alt="img">
+      <img [src]="resumeObject.photo" alt="img">
     </div>
     <div class="content-box">
       <div class="general-information">
         <div class="header">
-          <p class="name">Something</p>
+          <p class="name">{{ resumeObject.generalInformation.name }}</p>
         </div>
         <div class="add-info">
-          <p>Something</p>
-          <p>Something</p>
-          <p>Something</p>
+          <p>{{ resumeObject.generalInformation.date }}</p>
+          <p>{{ resumeObject.generalInformation.accommodation }}</p>
+          <p>{{ resumeObject.generalInformation.relocation }}</p>
         </div>
       </div>
       <div class="contacts">
-        <p class="header">Something</p>
-        <p>Something</p>
-        <p>Something</p>
+        <p class="header">Контактная информация: </p>
+        <p>{{ resumeObject.contacts.phoneNumber }}</p>
+        <p>{{ resumeObject.contacts.email }}</p>
+        <p>{{ resumeObject.contacts.git }}</p>
+        <p>{{ resumeObject.contacts.skype }}</p>
+        <p>{{ resumeObject.contacts.linkedin }}</p>
       </div>
       <div class="official-information">
-        <p>Желаемая должность: </p>
-        <p>Желаемый уровень дохода: </p>
+        <p>Желаемая должность: {{ resumeObject.officialInformation.careerObjective }}</p>
+        <p>Желаемый уровень дохода: {{ resumeObject.officialInformation.desiredIncome }}</p>
       </div>
       <div class="skills">
         <div class="header">
@@ -29,8 +32,8 @@
         </div>
         <div class="add-info">
           <ul class="list">
-            <li class="list-item">
-              <p>Something</p>
+            <li class="list-item" *ngFor="let item of resumeObject.skills">
+              <p>{{ item }}</p>
             </li>
           </ul>
         </div>
@@ -41,8 +44,8 @@
         </div>
         <div class="add-info">
           <ul class="list">
-            <li class="list-item">
-              <p>Something</p>
+            <li class="list-item" *ngFor="let item of resumeObject.achievements">
+              <p>{{ item }}</p>
             </li>
           </ul>
         </div>
@@ -51,50 +54,54 @@
         <div class="header">
           <p>Опыт работы:</p>
         </div>
-        <div class="content">
-          <div class="period-and-position">
-            <p>Year - Year</p>
-            <p>Something</p>
+        <ng-container *ngFor="let item of resumeObject.workExperience">
+          <div class="content">
+            <div class="period-and-position">
+              <p>{{ item.periodOfTime.start | date }} - {{ item.periodOfTime.end | date }}</p>
+              <p>{{ item.position }}</p>
+            </div>
+            <div class="company">
+              <p>{{ item.job }}</p>
+            </div>
+            <div class="scope-company">
+              <p>{{ item.scopeCompany }}</p>
+            </div>
+            <div class="responsibility">
+              <ul class="list">
+                <li class="list-item" *ngFor="let responsibility of item.responsibility">
+                  <p>{{ responsibility }}</p>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="company">
-            <p>Something</p>
-          </div>
-          <div class="scope-company">
-            <p>Something</p>
-          </div>
-          <div class="responsibility">
-            <ul class="list">
-              <li class="list-item">
-                <p>Something</p>
-              </li>
-            </ul>
-          </div>
-        </div>
+        </ng-container>
       </div>
       <div class="education">
         <div class="header">
           <p>Образование:</p>
         </div>
-        <div class="content">
-          <div class="period-and-study-place">
-            <p>Year - Year</p>
-            <p>Something</p>
+        <ng-container *ngFor="let item of resumeObject.education">
+          <div class="content">
+            <div class="period-and-study-place">
+              <p>{{ item.periodOfTime.start | date }} - {{ item.periodOfTime.end | date }}</p>
+              <p>{{ item.studyPlace }}</p>
+            </div>
+            <div class="faculty">
+              <p>{{ item.faculty }}</p>
+            </div>
+            <div class="specialty">
+              <p>{{ item.specialty }}</p>
+            </div>
+            <div class="qualification">
+              <p>{{ item.qualification }}</p>
+            </div>
           </div>
-          <div class="faculty">
-            <p>Something</p>
-          </div>
-          <div class="specialty">
-            <p>Something</p>
-          </div>
-          <div class="qualification">
-            <p>Something</p>
-          </div>
-        </div>
+        </ng-container>
       </div>
       <div class="additional-information">
         <ul class="list">
-          <li class="list-item">
-            <p>Something</p>
+          <li class="list-item" *ngFor="let item of resumeObject.additionalInformation">
+            <p>{{ item }}</p>
           </li>
         </ul>
       </div>

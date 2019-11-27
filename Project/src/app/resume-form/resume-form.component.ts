@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { ResumeObject } from '../app.model';
+import { GetResumeDataService } from '../get-resume-data.service';
 
 @Component({
   selector: 'app-resume-form',
   templateUrl: './resume-form.component.html',
-  styleUrls: ['./resume-form.component.scss']
+  styleUrls: ['./resume-form.component.scss'],
 })
 export class ResumeFormComponent implements OnInit {
 
   resumeObject: ResumeObject;
 
-  constructor() { }
+  constructor(private resumeService: GetResumeDataService ) { }
 
   ngOnInit() {
     this.resumeObject = {
@@ -23,7 +24,7 @@ export class ResumeFormComponent implements OnInit {
       officialInformation: null,
       skills: [],
       workExperience: [],
-    }
+    };
   }
 
   addGeneralInfo(genInfo) {
@@ -64,5 +65,6 @@ export class ResumeFormComponent implements OnInit {
 
   onSubmitClick() {
     console.log(this.resumeObject);
+    this.resumeService.pushResume(this.resumeObject);
   }
 }
