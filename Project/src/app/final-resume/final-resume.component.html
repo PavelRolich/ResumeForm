@@ -80,23 +80,21 @@
         <div class="header">
           <p>Образование:</p>
         </div>
-        <ng-container *ngFor="let item of resumeObject.education">
-          <div class="content">
-            <div class="period-and-study-place">
-              <p>{{ item.periodOfTime.start | date }} - {{ item.periodOfTime.end | date }}</p>
-              <p>{{ item.studyPlace }}</p>
-            </div>
-            <div class="faculty">
-              <p>{{ item.faculty }}</p>
-            </div>
-            <div class="specialty">
-              <p>{{ item.specialty }}</p>
-            </div>
-            <div class="qualification">
-              <p>{{ item.qualification }}</p>
-            </div>
+        <div class="content" *ngFor="let item of resumeObject.education">
+          <div class="period-and-study-place">
+            <p>{{ item.periodOfTime.start | date }} - {{ item.periodOfTime.end | date }}</p>
+            <p>{{ item.studyPlace }}</p>
           </div>
-        </ng-container>
+          <div class="faculty">
+            <p>{{ item.faculty }}</p>
+          </div>
+          <div class="specialty">
+            <p>{{ item.specialty }}</p>
+          </div>
+          <div class="qualification">
+            <p>{{ item.qualification }}</p>
+          </div>
+        </div>
       </div>
       <div class="additional-information">
         <ul class="list">

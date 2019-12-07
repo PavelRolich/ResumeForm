@@ -5,4 +5,13 @@
 }
 .card .container {
   width: 100%;
+  min-height: 350px;
+}
+.card .container .img-box {
+  width: 200px;
+  height: 300px;
+  border: 1px solid #000000;
+  float: left;
+  display: block;
+  margin: 0 16px 16px 0;
 }

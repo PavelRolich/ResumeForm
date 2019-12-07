@@ -41,7 +41,7 @@ export interface OfficialInformation {
 }
 
 export interface ResumeObject {
-  photo?: string;
+  photo: string;
   generalInformation?: GeneralInformation;
   achievements?: string[];
   contacts?: Contacts;
