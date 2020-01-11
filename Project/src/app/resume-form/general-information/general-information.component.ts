@@ -22,23 +22,23 @@ export class GeneralInformationComponent implements OnInit {
     };
   }
 
-  onChangeDateValue(event: Event) {
-    this.genInformation.date = new Date((event.target as HTMLInputElement).value);
+  onChangeDateValue(model: string) {
+    this.genInformation.date = new Date(model);
     this.sendInfo.emit(this.genInformation);
   }
 
-  onChangeNameValue(event: Event) {
-    this.genInformation.name = (event.target as HTMLInputElement).value;
+  onChangeNameValue(model: string) {
+    this.genInformation.name = model;
     this.sendInfo.emit(this.genInformation);
   }
 
-  onChangeAccommodationValue(event: Event) {
-    this.genInformation.accommodation = (event.target as HTMLInputElement).value;
+  onChangeAccommodationValue(model: string) {
+    this.genInformation.accommodation = model;
     this.sendInfo.emit(this.genInformation);
   }
 
-  onChangeRelocationValue(event: Event) {
-    this.genInformation.relocation = (event.target as HTMLInputElement).value;
+  onChangeRelocationValue(model: string) {
+    this.genInformation.relocation = model;
     this.sendInfo.emit(this.genInformation);
   }
 }

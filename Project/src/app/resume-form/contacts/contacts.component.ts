@@ -29,7 +29,7 @@ export class ContactsComponent implements OnInit {
 
   ngOnInit() {
     this.contacts = {
-      phoneNumber: '',
+      phoneNumber: '+375(',
       email: '',
       git: '',
       skype: '',
@@ -37,28 +37,28 @@ export class ContactsComponent implements OnInit {
     };
   }
 
-  onChangePhoneValue(event: Event) {
-    this.contacts.phoneNumber = (event.target as HTMLInputElement).value;
+  onChangePhoneValue(model: string) {
+    this.contacts.phoneNumber = model;
     this.sendInfo.emit(this.contacts);
   }
 
-  onChangeEmailValue(event: Event) {
-    this.contacts.email = (event.target as HTMLInputElement).value;
+  onChangeEmailValue(model: string) {
+    this.contacts.email = model;
     this.sendInfo.emit(this.contacts);
   }
 
-  onChangeGitValue(event: Event) {
-    this.contacts.git = (event.target as HTMLInputElement).value;
+  onChangeGitValue(model: string) {
+    this.contacts.git = model;
     this.sendInfo.emit(this.contacts);
   }
 
-  onChangeSkypeValue(event: Event) {
-    this.contacts.skype = (event.target as HTMLInputElement).value;
+  onChangeSkypeValue(model: string) {
+    this.contacts.skype = model;
     this.sendInfo.emit(this.contacts);
   }
 
-  onChangeLinkedInValue(event: Event) {
-    this.contacts.linkedin = (event.target as HTMLInputElement).value;
+  onChangeLinkedInValue(model: string) {
+    this.contacts.linkedin = model;
     this.sendInfo.emit(this.contacts);
   }
 }

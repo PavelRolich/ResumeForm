@@ -3,20 +3,20 @@
   <div class="component-content">
     <mat-form-field class="form-field" appearance="outline">
       <mat-label>ФИО</mat-label>
-      <input (change)="onChangeNameValue($event)" matInput>
+      <input [ngModel]="genInformation.name" (ngModelChange)="onChangeNameValue($event)" matInput>
     </mat-form-field>
     <mat-form-field class="form-field">
-      <input matInput (change)="onChangeDateValue($event)" [matDatepicker]="picker" [max]="maxDate" placeholder="Дата рождения">
+      <input matInput (ngModelChange)="onChangeDateValue($event)" [matDatepicker]="picker" [max]="maxDate" placeholder="Дата рождения">
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker touchUi startView="multi-year" #picker></mat-datepicker>
     </mat-form-field>
     <mat-form-field class="form-field" appearance="outline">
       <mat-label>Проживание</mat-label>
-      <input (change)="onChangeAccommodationValue($event)" matInput>
+      <input [ngModel]="genInformation.accommodation" (ngModelChange)="onChangeAccommodationValue($event)" matInput>
     </mat-form-field>
     <mat-form-field class="form-field" appearance="outline">
       <mat-label>Готов(а) к переезду в город</mat-label>
-      <input (change)="onChangeRelocationValue($event)" matInput>
+      <input [ngModel]="genInformation.relocation" (ngModelChange)="onChangeRelocationValue($event)" matInput>
     </mat-form-field>
   </div>
 </div>

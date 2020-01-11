@@ -15,8 +15,8 @@ export class AdditionalInformationComponent implements OnInit {
     
   }
 
-  onChangeValue(event: Event) {
-    const local: string = (event.target as HTMLInputElement).value;
+  onChangeValue(model: string) {
+    const local: string = model;
     this.addInformation = local.split(',').map((localItem) => {
       return localItem.trim();
     });
